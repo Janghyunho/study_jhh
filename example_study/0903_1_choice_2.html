@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>선택자2</title>
+		<style>
+			*{list-style:none;}
+			a{color:yellow}
+			a:link{color:green}
+			a:hover{border-bottom:2px #00f solid; background-color:hotpink;}
+			input[type="text"]{border:1px #F00 solid;}
+			img[src="Koala.jpg"]{width:100px;}
+			
+			/*
+	
+			E:visited
+			E:active
+			
+			img[src$=""]{}
+			img[src^=""]{}
+			img[src*=""]{}
+			
+			before, after : IE8부터 호환
+			
+			*/
+			
+			h1,h2{font-size:20px;}
+			h1:before{content:"OK"; color:red; font-size:50px; display:block; background:url(Koala.jpg) no-repeat; background-size:100px;}
+			h1:after{content:"Bye"; color:blue; font-size:10px; display:block;}
+			h2:before{content:"Hi"; color:blue; font-size:50px;}
+			h2:after{content:"Hi"; color:red; font-size:10px;}
+			
+		</style>
+	</head>
+	<body>
+		<a href="#">홈페이지 이동</a>
+		<a href="">홈페이지 이동2</a>
+		
+		<ul>
+			<li>
+				<div class="aaa">sss</div>
+			</li>
+			<li><input type="text"></li>
+			<li><input type="password"></li>
+			<li><img src="Koala.jpg" alt="코알라"/></li>
+		</ul>
+		
+		<h1>Hi</h1>
+		<h2>Hi</h2>
+		
+	</body>
+</html>

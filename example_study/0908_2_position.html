@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>0908_position</title>
+		<style>
+			.box{border:1px #F00 solid; width:900px; height:1000px; margin:100px auto; position:relative;}
+			.box .box_1{border:1px #00F solid; position:fixed; top:300px; width:200px; height:300px;}
+			.box .box_2{border:1px #000 solid; position:absolute; left:200px; width:200px; height:300px;}
+			.box .box_1 ul{border:1px #F00 solid; width:150px; height:100px;}
+			.box .box_1 ul:first-child{position:absolute; top:200px; right:-100px;}
+			.box .box_2 ul{border:1px #F00 solid;}
+		
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box_1">
+			  <ul>
+			  	<li>text</li>
+			  	<li>text</li>
+			  	<li>text</li>
+			  </ul>
+			  <ul>
+			  	<li>text</li>
+			  	<li>text</li>
+			  	<li>text</li>
+			  </ul>
+			  <ul>
+			  	<li>text</li>
+			  	<li>text</li>
+			  	<li>text</li>
+			  </ul>
+			</div>
+			<div class="box_2">
+			  <ul>
+			  	<li>text</li>
+			  	<li>text</li>
+			  	<li>text</li>
+			  </ul>
+			  <ul>
+			  	<li>text</li>
+			  	<li>text</li>
+			  	<li>text</li>
+			  </ul>
+			  <ul>
+			  	<li>text</li>
+			  	<li>text</li>
+			  	<li>text</li>
+			  </ul>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>0907_1_ex_newp2</title>
+		<style>	
+			*{margin:0; padding:0;}
+			ul,li{list-style:none;}
+			a{text-decoration:none;}
+			
+			.wrap{width:936px; height:560px; margin:100px auto; background:url(images/news/bg_panel.png) no-repeat;}
+			
+			header{border-bottom:3px #000 solid; width:840px; height:111px; margin:0 auto;}
+			header h1{float:left; margin-top:20px;}
+			header .banner{width:468px; height:60px; background:url(images/news/top-banner_1.jpg) no-repeat; float:right; margin-top:40px;}
+			header .top_menu{clear:left; width:360px;}
+			header .top_menu ul>li{margin-right:3px;}
+			header .top_menu ul .tm1{width:68px; height:22px; background:url(images/news/sp_nwstd.png) no-repeat -185px -198px; float:left;}
+			header .top_menu ul .tm2{width:108px; height:22px; background:url(images/news/sp_nwstd.png) no-repeat -291px -173px; float:left;}
+			header .top_menu ul .tm3{width:30px; height:22px; background:url(images/news/sp_nwstd.png) no-repeat -498px -269px; float:left;}
+			header .top_menu ul .tm4{font-size:10px; color:#454545; line-height:24px;}
+			
+			section{position:relative;}
+			section .content_1_l .l_txt1{ margin:0 0 10px 50px; float:left;}
+			section .content_1_l .l_txt1 img{width:353px;}
+			section .content_1_l .l_txt1 ul{width:353px; height:80px; background:url(images/news/newsp_2/009.png); position:absolute; top:127px; background-size:353px 80px;}
+			section .content_1_l .l_txt1 ul li{font-weight:bold; margin-left:5px;}
+			section .content_1_l .l_txt1 ul a .l_sp1:hover{border-bottom:2px yellow solid;}
+			section .content_1_l .l_txt1 ul a .l_sp2:hover{border-bottom:2px white solid;}
+			section .content_1_l .l_txt1 ul a .l_sp3:hover{border-bottom:2px #24649c solid;}
+			section .content_1_l .l_txt2, .content_1_r .r_txt1{margin-left:8px; float:left; width:160px;}
+			section .content_1_l .l_txt2 img, .content_1_r .r_txt1 img{width:160px; height:132px;}
+			section .content_1_l .l_txt2 ul , .content_1_r .r_txt1 ul {line-height:15px;}
+			section .content_1_l .l_txt2 , .content_1_r .r_txt1 {font-size:14px;}
+			section .content_1_l .l_txt2 span, .content_1_r .r_txt1 span{font-size:12px;}
+			section .content_1_l .l_txt2 a, .content_1_r .r_txt1 a{color:#000;}
+			section .content_1_l .l_txt2 a span, .content_1_r .r_txt1 a span{color:#24649c;}
+			section .content_1_l .l_txt2 a:hover, .content_1_r .r_txt1 a:hover{color:#24649c; border-bottom:1px #23649c solid;}
+			
+			section .content_1_r .r_txt1{padding-left:8px; border-left: 1px solid #cccccc;}
+			section .content_1_r .r_txt2{width:134px; margin:10px 0 0 755px;}
+			section .content_1_r .r_txt2 img{width:134px; height:95px;}
+			section .content_1_r .r_txt2 img:first-child{margin-bottom:4px;}
+			section .content_1_r .r_txt2 p{font-size:12px; position:absolute; width:134px;  background:url(images/news/newsp_2/009.png); background-size:133px 35px;}
+			section .content_1_r .r_txt2 a{color:white;}
+			section .content_1_r .r_txt2 a:hover{border-bottom:1px white solid;}
+			
+			section .content_2{margin-top:10px;}
+			section .content_2 .c2_box{background:url(images/news/newsp_2/010.jpg) no-repeat; width:840px; height:163px; margin:0 auto;}
+			section .content_2 .c2_box .c2_box_t>dl>dd{float:left; width:171px; line-height:16px; font-size:12px; font-weight:bold; margin:10px 0 13px 0; text-align:center;}
+			section .content_2 .c2_box .c2_box_t dl dd:first-child+dd+dd{width:150px; line-height:5px; margin-top:5px;}
+			section .content_2 .c2_box .c2_box_t a{color:#223237;}
+			section .content_2 .c2_box .c2_box_t a:hover{color:#24649c; border-bottom:1px #23649c solid;}
+			
+			section .content_2{position:relative;}
+			section .content_2 .c2_box .c2_box_l dl{float:left;}
+			section .content_2 .c2_box .c2_box_l dl dd{margin-bottom:10px; padding-left:19px; font-size:12px; line-height:16px;}
+			section .content_2 .c2_box_c dd img{margin:2px 0 0 34px; float:left;}
+			section .content_2 .c2_box_c dl .c2_b_c{font-size:11px; width:137px; height:29px; position:absolute; top:125px; left:400px; background:url(images/news/017.png);}
+			section .content_2 .c2_box .c2_box_r dl dd{margin:7px 0 10px 0; padding-left:515px; font-size:12px; line-height:16px;}
+			section .c2_box_l dd:first-child, section .c2_box_r dd:first-child, section .c2_box_l dd:first-child+dd+dd, section .c2_box_r dd:first-child+dd+dd,  section .c2_box_l dd:first-child+dd+dd+dd+dd, section .c2_box_r dd:first-child+dd+dd+dd+dd{font-weight:bold;}
+			section .content_2 .c2_box .c2_box_l a, section .content_2 .c2_box .c2_box_r a{color:#000;}
+			section .content_2 .c2_box .c2_box_l a:hover, section .content_2 .c2_box .c2_box_r a:hover{color:#24649c; border-bottom:1px #23649c solid;}
+			section .content_2 .c2_box_c dl .c2_b_c a{color:#FFF;}
+			section .content_2 .c2_box_c dl .c2_b_c a:hover{border-bottom:1px #FFF solid;}
+			
+			footer h5{margin:5px 50px 0 50px; height:20px; font-size:11px; float:right;}
+			footer h5 a{color:#000;}
+			footer span{color:#00F}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<header>
+				<h1><a href="http://imnews.imbc.com/"><img src="http://static.naver.net/newsstand/up/2013/0813/nsd114044142.gif" width="260" height="55" alt="MBC"></a></h1>
+				<div class="banner"></div>
+				<div class="top_menu">
+					<ul>
+						<li class="tm1"></li>
+						<li class="tm2"></li>
+						<li class="tm3"></li>
+						<li class="tm4">09-04 13:50 편집</li>
+					</ul>
+				</div>
+			</header>
+			
+			<section>
+				<div class="content_1_l">
+					<ul>
+						<li class="l_txt1">
+							<img src="images/news/newsp_2/001.jpg" alt="돌고래호_1" />
+							<ul>
+								<li>
+									<a href="">
+										<span class="l_sp1" style="font-size:21px; color:yellow;">"실종자 8명 어디에...</span></br>
+										<span class="l_sp2" style="font-size:21px; color:white;">사고 해역 사흘째 수색</span></br>
+										<span class="l_sp3" style="font-size:12px; color:#24649c;">┗ "'쾅' 하며 순식간에 배 뒤집혀" 긴박했던 사고 당시 상황</span>
+									</a>
+								</li>	
+							</ul>
+						</li>
+						<li class="l_txt2">
+							<img src="images/news/newsp_2/002.jpg" alt="돌고래호_2" />
+							<ul>
+								<li><a href="http://imnews.imbc.com/replay/2015/nwtoday/article/3766142_14782.html"><strong><span style="color:hotpink; font-size:14px;">[이슈]</span>'한 해 1천 건' 어선사고 원인과 대처법</strong></br><span>오늘 이슈투데이에서는 돌고래호 전복...</span></a></li>
+							</ul>
+						</li>
+				</div>
+				
+				<div class="content_1_r">
+						<li class="r_txt1">
+							<img src="images/news/newsp_2/003.jpg" alt="40대 여성" />
+							<ul>
+								<li><a href="http://imnews.imbc.com/replay/2015/nwtoday/article/3766142_14782.html"><strong>40대 여성 장롱서 숨진채 발견 '양손 끈으로 묶여'</strong></br><span>서울 송파구의 한 주택 안 장롱에</span></a></li>
+							</ul>
+						</li>
+						<li class="r_txt2">
+							<img src="images/news/newsp_2/004.jpg" alt="동거녀" />
+							<p style="top:64px;"><a href="http://imnews.imbc.com/replay/2015/nwtoday/article/3766142_14782.html">"말다툼에"  동거녀 살해 뒤 암매장하 30대 검거</a></p>
+							<img src="images/news/newsp_2/005.jpg" alt="튼튼거낭" />
+							<p style="top:166px;"><a href="http://imnews.imbc.com/replay/2015/nwtoday/article/3766142_14782.html"><span style="color:yellow;">[1분 튼튼건강]</span>맵시 있는 등라인 만들기</a></p>		
+						</li>
+					</ul>
+				</div>
+				
+				<div class="content_2">
+					<div class="c2_box">
+					 	<div class="c2_box_t">
+							<dl>
+								<dd><a href="http://imnews.imbc.com/news/2015/politic/article/3766861_14722.html">'심학봉 징계안'결론못내</a></dd>
+								<dd><a href="http://imnews.imbc.com/news/2015/politic/article/3766861_14722.html">삼성 등 신입사원 공채 시작</a></dd>
+								<dd><a href="http://imnews.imbc.com/news/2015/politic/article/3766861_14722.html"><img src="images/news/newsp_2/006.jpg" style="width:92px; height:20px; " alt="8뉴스데스크" /></a></dd>
+								<dd><a href="http://imnews.imbc.com/news/2015/politic/article/3766861_14722.html">롯데, 불공정 행위 1위</a></dd>
+								<dd><a href="http://imnews.imbc.com/news/2015/politic/article/3766861_14722.html">이재현 회장 10일 선고</a></dd>
+							</dl>
+						</div>
+						<div class="c2_box_l">
+							<dl>
+								<dd><a href="http://imnews.imbc.com/replay/2015/nw930/article/3766874_14769.html">여야, 내일 대법관 인준·결산안 처리 본회의 개최키로</a></dd>
+								<dd><a href="http://imnews.imbc.com/replay/2015/nw930/article/3766874_14769.html">이산가족 상봉 실무접촉 개최, 정례화 방안 논의</a></dd>
+								<dd><a href="http://imnews.imbc.com/replay/2015/nw930/article/3766874_14769.html">홈플러스, 7조 2천억 원에 MBK컨소시움으로 매각</a></dd>
+								<dd><a href="http://imnews.imbc.com/replay/2015/nw930/article/3766874_14769.html">이통사 음성·문자 한도초과 시 고객에게 통지 '의무화'</a></dd>
+								<dd><a href="http://imnews.imbc.com/replay/2015/nw930/article/3766874_14769.html">"서울 분뇨하수 2013년 이후 한강에 30만t 방류돼"</a></dd>
+							</dl>
+						</div>
+						<div class="c2_box_c">
+							<dl>
+								<dd><img src="images/news/newsp_2/007.jpg" style="width:137px; height:113px;" alt="짝퉁" /></dd>
+								<dd class="c2_b_c"><a href="http://imnews.imbc.com/replay/2015/nw930/article/3766874_14769.html"><span style="color:yellow;">유명쇼핑몰서 샀는데 '짝퉁',</span></br>80억 원어치 판매</a></dd>
+							</dl>
+						</div>
+						<div class="c2_box_r">
+							<dl>
+								<dd><a href="http://imnews.imbc.com/replay/2015/nw930/article/3766874_14769.html">송파구 빌라 장롱에서 40대 여성 숨진채 발견</a></dd>
+								<dd><a href="http://imnews.imbc.com/replay/2015/nw930/article/3766874_14769.html">'벤틀리-페라리 부부' 수상한 돈 출처는 "도박 사이트"</a></dd>
+								<dd><a href="http://imnews.imbc.com/replay/2015/nw930/article/3766874_14769.html">중학생이 등굣길 지각 꾸짖는 여교사 멱살잡아</a></dd>
+								<dd><a href="http://imnews.imbc.com/replay/2015/nw930/article/3766874_14769.html">문화재 전승비로 교통사고 비용 처리, 관리 '허술'</a></dd>
+								<dd><a href="http://imnews.imbc.com/replay/2015/nw930/article/3766874_14769.html">대만서 한국인 관광객 잇단 추태, 치마속 몰카 '덜미'</a></dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer>
+				<h5><a href="http://imnews.imbc.com/"><span>MBC</span>사이트 바로가기</a></h5>
+			</footer>
+		</div>
+	</body>
+</html>

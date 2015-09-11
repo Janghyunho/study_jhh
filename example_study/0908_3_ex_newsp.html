@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>0908_ex_newsp</title>
+	</head>
+	<style>
+		*{margin:0; padding:0;}
+		ul,li{list-style:none;}
+		a{text-decoration:none;}
+		
+		body{background: url(http://static.naver.net/newsstand/img/20121231/bg_bd.png);}
+		
+		.y_wrap{width:936px; height:560px; margin:100px auto; background:url(images/news/bg_panel.png) no-repeat;}
+		
+		header{border-bottom:3px #000 solid; width:840px; height:111px; margin:0 auto;}
+		header h1{float:left; margin-top:20px;}
+		header .banner{width:468px; height:60px; background:url(images/news/top-banner_1.jpg) no-repeat; float:right; margin-top:40px;}
+		header .ytn_t_mu{clear:left; width:360px;}
+		header .ytn_t_mu ul>li{margin-right:3px;}
+		header .ytn_t_mu ul .y_mn1{width:68px; height:22px; background:url(images/news/sp_nwstd.png) no-repeat -185px -198px; float:left;}
+		header .ytn_t_mu ul .y_mn2{width:108px; height:22px; background:url(images/news/sp_nwstd.png) no-repeat -291px -173px; float:left;}
+		header .ytn_t_mu ul .y_mn3{width:30px; height:22px; background:url(images/news/sp_nwstd.png) no-repeat -498px -269px; float:left;}
+		header .ytn_t_mu ul .y_mn4{font-size:10px; color:#454545; line-height:24px;}
+		
+		section{width:840px; margin:0 auto; overflow:hidden; position:relative;}
+		section .con_le{width:602px; float:left;}
+		section .con_le .con_le_t{margin-top:10px;}
+		section .con_ri{width:234px; margin-left:605px;}
+		section .con_le .con_le_t ul:first-child{width:400px; height:225px; float:left; background:url(images/news/newsp_3/001.jpg) no-repeat; background-size:400px 225px;}
+		section .con_le .con_le_t ul:first-child+ul, 
+		section .con_le .con_le_t ul:first-child+ul+ul{width:200px; height:112px; margin-left:402px;}
+		section .con_le .con_le_t ul:first-child+ul{background:url(images/news/newsp_3/002.jpg) no-repeat; background-size:200px 112px; margin-bottom:2px;}
+		section .con_le .con_le_t ul:first-child+ul+ul{background:url(images/news/newsp_3/003.jpg) no-repeat; background-size:200px 112px;}
+		section .con_le .con_le_t ul .le_t1{width:400px; height:157px; position:absolute; top:80px; background:url(images/news/newsp_3/009.png);}
+		section .con_le .con_le_t ul .le_t1 a{font-size:22px; color:#FFF; font-weight:bold; position:absolute; top:120px;}
+		section .con_le .con_le_t ul .le_t1 a:hover{border-bottom:3px #FFF solid;}
+		section .con_le .con_le_t ul .le_t2{width:200px; height:86px; position:absolute; top:37px;  line-height:16px; background:url(images/news/newsp_3/010.png);}
+		section .con_le .con_le_t ul .le_t2 a, 
+		section .con_le .con_le_t ul .le_t3 a{font-size:12px; color:#FFF; font-weight:bold; position:absolute; top:50px;}
+		section .con_le .con_le_t ul .le_t3{width:200px; height:86px; position:absolute; top:151px; line-height:16px; background:url(images/news/newsp_3/010.png);}
+		
+		section .con_le .con_le_b .le_b_le{width:300px; float:left;}
+		section .con_le .con_le_b .le_b_ri{width:300px; margin-left:302px;}
+		section .con_le .con_le_b .le_b_le li:first-child{background-color:#00AEEF; margin-bottom:1px;}
+		section .con_le .con_le_b .le_b_ri li:first-child{background-color:#00AEEF; margin:3px 0 1px 0;}
+		section .con_le .con_le_b li:first-child+li{background-color:#000;}
+		section .con_le .con_le_b li{height:24px; background-color:#CCC; margin-bottom:2px; font-size:12px; line-height:24px; overflow:hidden; text-overflow:ellipsis;}
+		section .con_le .con_le_b li a{color:#000; font-weight:bold;}
+		section .con_le .con_le_b li:first-child a,
+		section .con_le .con_le_b li:first-child+li a{color:#FFF;}
+		section .con_le .con_le_b .le_b_le li:hover a,
+		section .con_le .con_le_b .le_b_ri li:hover a{color:#d12819; border-bottom:2px #d12819 solid;}
+		
+		section .con_ri{margin-top:10px;}
+		section .con_ri .ri_bx_t{border:3px #F00 solid;}
+		section .con_ri .ri_bx_t li:first-child{background:url(images/news/newsp_3/011.png)no-repeat; position:absolute; top:11px; right:199px; z-index:1; width:35px; height:22px;} 
+		section .con_ri .ri_i1{width:228px; height:149px; background:url(images/news/newsp_3/004.jpg) no-repeat; background-size:228px 149px;}
+		section .con_ri .ri_bx_t li:last-child{width:228px; height:27px; font-size:13px; line-height:28px; background:#FFF; z-index:1; position:absolute; top:134.5px; overflow:hidden; text-overflow:ellipsis;}
+		section .con_ri .ri_bx_t li:last-child a{color:#000; font-weight:bold;}		
+		section .con_ri .ri_bx_t li:last-child:hover a{border-bottom:1px #000 solid;}		
+
+		section .con_ri .ri_bx_b{margin-top:2px; height:221px;}
+		section .con_ri .ri_bx_b ul{width:112px; height:107px; float:left; margin:0 5px 6px 0;}
+		section .con_ri .ri_bx_b ul li:first-child{width:112px; height:107px; background-size:112px 107px;}
+		section .con_ri .ri_bx_b .ri_i2{border:2px #000 solid; background:url(images/news/newsp_3/005.jpg) no-repeat;}
+		section .con_ri .ri_bx_b .ri_i3{border:2px #000 solid; background:url(images/news/newsp_3/006.jpg) no-repeat;}
+		section .con_ri .ri_bx_b .ri_i4{border:2px #00adef solid; background:url(images/news/newsp_3/007.jpg) no-repeat;}
+		section .con_ri .ri_bx_b .ri_i5{border:2px #00adef solid; background:url(images/news/newsp_3/008.jpg) no-repeat;}
+		section .con_ri .ri_bx_b ul li:last-child{width:114px; height:42px; font-size:12px; overflow:hidden; white-space:normal; text-overflow:ellipsis; padding:2px 0; position:absolute; line-height:20px;}
+		section .con_ri .ri_bx_b ul li:last-child a{font-weight:bold; color:#FFF;}
+		section .con_ri .ri_bx_b ul li:last-child:hover a{border-bottom:1px #FFF solid;}
+
+		footer h5{margin:5px 50px 0 50px; height:20px; font-size:11px; float:right;}
+		footer h5 a{color:#000;}
+		footer span{color:#00F}
+	</style>
+	<body>
+		<div class="y_wrap">
+			<header>
+				<div class="y_top">
+					<h1><a href="http://www.ytn.co.kr/"><img src="images/news/newsp_3/ytn_name.gif" alt="YTN" /></a></h1>
+					<div class="banner"></div>
+					<div class="ytn_t_mu">
+						<ul>
+							<li class="y_mn1"></li>
+							<li class="y_mn2"></li>
+							<li class="y_mn3"></li>
+							<li class="y_mn4">09-04 13:50 편집</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+			<section>
+					<div class="con_le">
+						<div class="con_le_t">
+							<ul>
+								<li class="le_t1"><a href="http://www.ytn.co.kr/_ln/0102_201509081353494884_005">홈플러스 삼킨 MBK, 김병주는 누구?</a></li>
+							</ul>
+							<ul>
+								<li class="le_t2"><a href="http://www.ytn.co.kr/_ln/0101_201509081445272444_005"><span style="color:#F00">[영상]</span>몸싸움 직전까지...난장판 된 국회</a></li>
+							</ul>
+							<ul>
+								<li class="le_t3"><a href="http://www.ytn.co.kr/_sn/0117_201509081022458539_005"><span style="color:#F00">[단독]</span>서정희母 "서세원 홍콩행? 누군지 짐...</a></li>
+							</ul>
+					    </div>
+					    <div class="con_le_b">
+						    <ul class="le_b_le">
+						    	<li><a href="http://www.ytn.co.kr/_ln/0105_201509081057243434_005">[과학]자기 몸 5천배까지 번쩍...개미 괴력의 비밀은...</a></li>
+						    	<li><a href="http://www.ytn.co.kr/_ln/0102_201509081457319733_005">[경제]해외여행자보험 질병 있어도 가입 가능</a></li>
+						    	<li><a href="http://www.ytn.co.kr/_ln/0103_201509081154424979_005">강방 대신 접견실에서 수감생활? '황제접견'논란</a></li>
+						    	<li><a href="http://www.ytn.co.kr/_ln/0101_201509081500129977_005"><span style="color:#F00">[속보]</span>'한중일 정상회의'준비 회의 15일 개최</a></li>
+						    	<li><a href="http://www.ytn.co.kr/_ln/0103_201509081509231901_005">승부조작에 스포츠 도박까지... 운동선수 26명 '덜미'</a></li>
+						    	<li><a href="http://www.ytn.co.kr/_ln/0103_201509081331531723_005">검찰 "이완구-성완종 만남 증거자료 있다"</a></li>
+						    </ul>
+						    <ul class="le_b_ri">
+						    	<li><a href="http://www.ytn.co.kr/_ln/0101_201509081454340646_005">[정치]오는 15일 한중일 정상회의 준비 회의 개최</a></li>
+						    	<li><a href="http://www.ytn.co.kr/_ln/0103_201509081454244253_005">복지부 "일본뇌영 사백신 도입 절차 잘...</a></li>
+						    	<li><a href="http://www.ytn.co.kr/_ln/0104_201509081047245989_005"><span style="color:#F00">[영상]</span>방복 하늘에서 거대한 불덩어리 떨어져</a></li>
+						    	<li><a href="http://www.ytn.co.kr/_ln/0103_201509081327431048_005">제자 교복 치마 들어올린 교사 벌금형 활정</a></li>
+						    	<li><a href="http://www.ytn.co.kr/_ln/0103_201509081429318650_005">"빚 때문에..."재입북 시도 탈북자 구속기소</a></li>
+						    	<li><a href="http://www.ytn.co.kr/_ln/0103_201509081313392661_005">새신부 다이아몬드 반지 훔쳐 달아난 결혼 도우미</a></li>
+						    </ul>
+					    </div>
+					</div>
+					<div class="con_ri">
+						<ul class="ri_bx_t">
+							<li></li>
+							<li class="ri_i1"></li>
+							<li><a href="http://www.ytn.co.kr/_ln/0103_201509041630068987_005">너무 쿨한 '무단횡단'에 운전자는 그...</a></li>
+						</ul>
+						<ul class="ri_bx_b">
+							<ul>
+								<li class="ri_i2"></li>
+								<li style="background-color:#000; top:230px;"><a href="http://www.ytn.co.kr/_sn/0117_201509081349053906_005">전현무 3년 만에 KBS복귀..."입사했을...</a></li>
+							</ul>
+							<ul>
+								<li class="ri_i3"></li>
+								<li style="background-color:#000; top:230px;"><a href="http://www.ytn.co.kr/_sn/0117_201509080904153569_005">지드래곤 냉장고 공개...송로버섯·캐비...</a></li>
+							</ul>
+							<ul>
+								<li class="ri_i4"></li>
+								<li style="background-color:#00adef; top:344px;"><a href="http://www.ytn.co.kr/_ln/0109_201509081020088454_005">힘이 남아돌 때 차 빼는 방법 '가볍게 들...</a></li>
+							</ul>
+							<ul>
+								<li class="ri_i5"></li>
+								<li style="background-color:#00adef; top:344px;"><a href="http://www.ytn.co.kr/_ln/0109_201509081130067288_005">동생 생겼다는 엄마말에 5살 꼬마 반응</a></li>
+							</ul>
+						</ul>
+					</div>
+			</section>
+			<footer>
+				<h5><a href="http://www.ytn.co.kr/"><span>YTN</span>사이트 바로가기</a></h5>
+			</footer>
+		</div>
+	</body>
+</html>

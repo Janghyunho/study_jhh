@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>0903_2_background</title>
+	</head>
+	<style>
+		.back_test{
+			border:1px #F00 solid;
+			width:300px;
+			height:300px;
+			background-color:#00F;
+			float:left;
+		}
+		
+		.back_test2{
+			border:1px #F00 solid;
+			width:400px;
+			height:300px;
+			background:url(images/Koala.jpg) no-repeat;
+			background-color:green;
+			background-size:100px;
+			background-position:20px 50px;
+			margin-left:300px;
+		}
+		
+		body{background:url(images/Penguins.jpg)50% 0%;
+			background-attachment{}
+		}
+		
+		.wrap{width:500px; height:2000px; margin:0 auto; background:#FFF}
+	</style>
+	<body>
+		<div class="back_test">300X300</div>
+		<div class="back_test2">400X300</div>
+		
+		<div class="wrap"></div>
+	</body>
+</html>

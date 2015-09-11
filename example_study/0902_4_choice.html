@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>선택자</title>
+		<style>
+			*{list-style:none;}
+			div{border:1px #F00 solid; width:100px; height:100px; float:left;}
+			.box1{background:#f00;}
+			.box2{background:#ccc;}
+			.box3{background:url(Koala.jpg) no-repeat; background-size:100px 100px;}
+			.box4{background:#666;}
+			.select{clear:both;}
+			.select>li{border:1px #00F solid;} 
+			.select>li:first-child{border:5px hotpink solid;}
+			.select ul li{border:1px #F00 solid;}
+		
+			.select_1{border:1px #000 solid; width:500px;}
+			.select_1>li{border-top:1px #F00 solid;}
+			.select_1>li:first-child{border:none;}
+			.select_1>li:hover ul li{display:block;}
+			.select_1 li ul li{border:1px #00F solid; background:#00f; display:none;}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+		
+		<ul class="select">
+			<li>text
+				<ul>
+					<li>text</li>
+					<li>text</li>
+				</ul>
+			</li>
+			<li>text
+				<ul>
+					<li>text</li>
+					<li>text</li>
+				</ul>
+			</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+			<li>text</li>
+		</ul>
+		
+		<ul class="select_1">
+			<li>text
+				<ul>
+					<li>text</li>
+					<li>text</li>
+					<li>text</li>
+					<li>text</li>
+				</ul>
+			</li>
+			<li>text
+				<ul>
+					<li>text</li>
+					<li>text</li>
+					<li>text</li>
+					<li>text</li>
+				</ul>	
+			</li>
+			<li>text
+				<ul>
+					<li>text</li>
+					<li>text</li>
+					<li>text</li>
+					<li>text</li>
+				</ul>	
+			</li>
+			<li>text
+				<ul>
+					<li>text</li>
+					<li>text</li>
+					<li>text</li>
+					<li>text</li>
+				</ul>	
+			</li>
+			<li>text
+				<ul>
+					<li>text</li>
+					<li>text</li>
+					<li>text</li>
+					<li>text</li>
+				</ul>
+			</li>
+			<li>text
+				<ul>
+					<li>text</li>
+					<li>text</li>
+					<li>text</li>
+					<li>text</li>
+				</ul>
+			</li>
+		</ul>
+		
+	</body>
+</html>

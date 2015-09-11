@@ -1,0 +1,7 @@
+*{margin:0; padding:0;}
+ul,li{list-style:none;}
+a{text-decoration:none;}
+
+body{background: url(http://static.naver.net/newsstand/img/20121231/bg_bd.png);}
+
+.wrap{width:936px; height:560px; margin:150px auto; background:url(../images/news/bg_panel.png) no-repeat;}
